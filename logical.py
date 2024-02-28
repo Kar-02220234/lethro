@@ -1,5 +1,4 @@
 # AND operator(true if both true)
-
 # E1
 x = 5
 print(x > 3 and x < 10)
