@@ -35,6 +35,7 @@ if remove_title in books_list:
     authors_set.remove(romove_author)
     del books_dict[remove_title]
     print("book removed successfully!")
+    print("books available:",books_list)
 else:
     print("book not found")
     
