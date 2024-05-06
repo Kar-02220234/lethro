@@ -8,6 +8,6 @@ def sum_of_digits(n):
         return last_digits + sum_of_digits(remaining_digits)# recusive calculated and add remaining digit
     
 
-print(sum_of_digits(999))
+print(sum_of_digits(20))
     
                
