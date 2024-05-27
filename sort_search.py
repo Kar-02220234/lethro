@@ -1,30 +1,43 @@
 def bubble_sort_2d(arr):
-    for i in range(len(arr) - 1):
-        for j in range(len(arr[i])):
-            for k in range(len(arr[i]) - 1 - j):
-                row1 = j // len(arr[i])
-                col1 = j % len(arr[i])
+    n = len(arr)
+    m = len(arr[0])
+    total_elements = n * m
 
-                row2 = (j + 1) // len(arr[i])
-                col2 = (j + 1) % len(arr[i])
+    for i in range(total_elements - 1):
+        for j in range(total_elements - 1 - i):
+            row1 = j // m
+            col1 = j % m
+            row2 = (j + 1) // m
+            col2 = (j + 1) % m
 
-                if arr[row1][col1] > arr[row2][col2]:
-                    arr[row1][col1], arr[row2][col2] = arr[row2][col2], arr[row1][col1]
+            if arr[row1][col1] > arr[row2][col2]:
+                arr[row1][col1], arr[row2][col2] = arr[row2][col2], arr[row1][col1]
 
 def search_element(arr, element):
+    found = False
     for i in range(len(arr)):
         for j in range(len(arr[i])):
             if arr[i][j] == element:
-                print(f"element found at position: row = {i}, column = {j}")
+                print(f"Element found at position: row = {i}, column = {j}")
+                found = True
                 return
-    print("element not found in the given array.")
+    
+    if not found:
+        print("Element not in the given array.")
 
-arr =[[9, 2, 3],
-      [4, 5, 6],
-      [7, 8, 1]]
+arr = [
+    [9, 2, 3],
+    [4, 5, 6],
+    [7, 8, 1]
+]
+
+print("Original array:")
 print(arr)
+
 bubble_sort_2d(arr)
+
+print("Sorted array:")
 print(arr)
 
-search = int(input("enter the element to search:"))
+search = int(input("Enter the element to search: "))
 search_element(arr, search)

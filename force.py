@@ -1,27 +1,37 @@
-print("Newton's second law motion")
-print("--------------------------")
-# determine the missing value
-print("seclect the missing value:")
-print("1. mass(m)")
-print("2. acceleration (a)")
-print("3. force (f)")
-missing_value_choice = input("enter the option number for the missing value:")
-# promt the user to enter the other two values
+print ("Newton's Second Law of Motion")
+print ("---------------------------------------")
+
+print ("Select the missing value: ")
+print ("1. Mass(m)")
+print ("2. Acceleration(a) ")
+print ("3. Force (F)")
+missing_value_choice = input ("Enter the option number for the mssing value: ")
+
 if missing_value_choice == "1":
-    a = float(input("enter acceleration(a)"))
-    f = float(input("enter force(f)"))
-    m = f/a
-    print(f"mass(m) = {m}")
+    a = float(input ("Ennter the acceleration (a):"))
+    F = float(input ("Enter the force (F): "))
+    m = F / a
+    print (f"Mass (m)= {m} Kg")
+    
 elif missing_value_choice == "2":
-    m = float(input("enter mass(m)"))
-    f = float(input("enter force(f)"))
-    a = f/m
-    print(f"acceleratio(a) = {a}")
+    m = float(input ("Enter the mass (m):"))
+    F = float(input ("Enter the force (F):"))
+    a = F / m
+    print (f"Acceleration (a)= {a} meter per sec square")
 elif missing_value_choice == "3":
-    m = float(input("enter mass(m)"))
-    a = float(input("enter acceleration(a)"))
-    f = m*a
-    print(f"force(f) ={f}")
+    m = float(input("Enter the mass (m):"))
+    a = float(input("Ennter the acceleration (a): "))
+    F = a * m
+    print (f"Force (F)= {F} N")
 else:
-    print("invalid option selected for the missing value.")
-     
+    print("Invalid option selected fir the missing option")
+    
+
+    
+
+    
+    
+    
+
+
+
